@@ -1,0 +1,118 @@
+@import "_functions";
+@import "_variables";
+@import "_icons";
+
+i{
+    @include box(50px);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.content{
+    @include flexbox(column,center);
+    padding-top: $contentpadding;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-content: center;
+
+    .entry{
+        @include flexbox(row,center);
+        @include dimensions(600px,200px);
+        @include styling();
+        align-items: center;
+
+        .align{
+            @include flexbox(column,center);
+
+            .details{
+                @include flexbox(row,space-between);
+
+                .icons{
+                    @include flexbox(row,center);
+                }
+            }
+
+        }
+
+        img{
+            @include box(150px);
+            border-radius: $imgradius;
+            object-fit: $imgfit;
+        }
+
+    }
+
+}
+
+//Responsiveness
+@media screen and (max-width:645px){
+    .content{
+        .entry{
+
+            img{
+                @include box(100px);
+            }
+
+        }
+
+    }
+}
+
+
+@media screen and (max-width:475px){
+    .content{
+        .entry{
+
+            img{
+                @include box(100px);
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width:475px){
+    .content{
+        .entry{
+
+            img{
+                @include box(100px);
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width:475px){
+    .content{
+        .entry{
+
+            img{
+                @include box(100px);
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width:415px){
+    .content{
+        .entry{
+            padding-left: 15px;
+
+            img{
+                @include box(70px);
+            }
+
+        }
+
+    }
+}
+
+

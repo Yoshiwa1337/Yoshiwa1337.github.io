@@ -1,0 +1,78 @@
+@import "_functions";
+@import "_variables";
+@import "_icons";
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+
+.footer{
+    @include flexbox(column,center);
+    position: absolute;
+    width: 100%;
+    height: 2.5rem;
+    padding-top: 80px;
+
+    hr{
+        @include dimensions(100%,0);
+        border: 0.2px solid black;
+    }
+
+
+    .socials{
+        @include flexbox(row,center);
+
+        .links{
+            @include flexbox(row,center);
+            @include dimensions(100%,none);
+            align-items: center;
+            list-style: none;
+            font-family: $titlefont;
+
+            a{
+                display: block; //Needed to display the padding
+                padding: 5px 50px; //Gap between text and the top/bottom dividers
+                text-decoration: none;
+                color: $textcolour;
+                font-size: 24px;
+                font-family: $titlefont;
+                -webkit-text-stroke: 1px; 
+            }
+        }
+
+        
+    }
+
+    .policy{
+        @include flexbox(row,center);
+
+        .links{
+            @include flexbox(row,center);
+            @include dimensions(100%,none);
+            align-items: center;
+            list-style: none;
+            font-family: $titlefont;
+
+            a{
+                display: block; //Needed to display the padding
+                padding: 5px 50px; //Gap between text and the top/bottom dividers
+                text-decoration: none;
+                color: $textcolour;
+                font-size: 24px;
+                font-family: $titlefont;
+                -webkit-text-stroke: 1px; 
+            }
+        }
+
+    }
+
+    h3{
+        @include flexbox(row,center);
+    }
+
+
+}

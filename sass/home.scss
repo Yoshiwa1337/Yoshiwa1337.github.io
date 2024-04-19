@@ -1,0 +1,167 @@
+@import "_functions";
+@import "_variables";
+@import "_icons";
+
+
+
+
+i{
+    @include box(50px);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.landing{
+    @include flexbox(column,center);
+    padding-top: $contentpadding;
+    align-items: center;
+    row-gap: 50px;
+    flex-wrap: wrap;
+
+    #read-more{
+        position: relative;
+        left: 0;
+    }
+
+
+    .icon{
+        @include flexbox(row,left);
+    }
+
+
+    .latest{
+        @include flexbox(column,center);
+        align-items: center;
+        
+        img{
+            @include dimensions(800px,400px);
+            object-fit: cover;
+            border-radius: $imgradius;
+        }
+    }
+
+    .filter{
+        @include flexbox(row,center);
+
+        .links{
+            @include flexbox(row,space-evenly);
+            gap: 30px;
+            align-items: center;
+            list-style: none;
+            font-family: $titlefont;
+            padding: 0;
+            margin: 20px 0;
+            padding-bottom: 50px;
+            
+            
+
+            li{
+                margin: 0 10px;
+            }
+
+            a{
+                display: block; //Needed to display the padding
+                text-decoration: none;
+                color: $textcolour;
+                font-size: 24px;
+                font-family: $titlefont;
+                -webkit-text-stroke: 1px; 
+                background-color: #fff;
+                padding: 10px 15px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+            }
+
+            a:hover{
+                background-color: $bodycolour;
+                color: #fff;
+                transform: translateY(-2px);
+            }
+        }
+            
+
+    }
+
+    .rect{
+        @include flexbox(row,center);
+        @include dimensions(600px,150px);
+        @include styling();
+        align-items: center;
+
+        .details{
+            @include flexbox(column,center);
+            margin-right: 20px;
+
+        }
+
+        img{
+            @include box(100px);
+            object-fit: $imgfit;
+            border-radius: $imgradius;
+
+        }
+    }
+
+
+
+}
+
+//Responsiveness
+@media screen and (max-width:900px){
+    .landing{
+        .latest{
+            img{
+                @include dimensions(600px,300px);
+            }
+        }
+
+        .filter{
+            .links{
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:675px){
+    .landing{
+        .latest{
+            img{
+                @include dimensions(400px,200px);
+            }
+        }
+
+        .filter{
+            .links{
+                width: 80%;
+            }
+        }
+
+        .rect{
+            padding-left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:415px){
+    .landing{
+        .latest{
+            img{
+                @include dimensions(300px,150px);
+            }
+        }
+
+        .filter{
+            .links{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+

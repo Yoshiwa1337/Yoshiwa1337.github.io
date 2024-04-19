@@ -1,0 +1,204 @@
+@import "_functions";
+@import "_variables";
+@import "_icons";
+
+
+.section{
+    @include flexbox(column,center);
+    padding-top: $contentpadding; //Section would start inside the navbar without padding
+    gap: 50px;
+
+    img{
+        object-fit: $imgfit;
+        border-radius: $imgradius;
+    }
+
+    .user{
+        @include flexbox(row,center);
+        gap: 50px;
+
+        img{
+            @include dimensions(300px,400px);
+        }
+
+        .settings{
+            @include flexbox(column,space-around);
+        }
+    }
+
+    .contribution{
+        @include flexbox(row,space-evenly);
+        width: 100%;
+
+        span{
+            @include flexbox(row,center);
+            width: 25%;
+
+            p{
+                width: fit-content;
+                display: block; //Needed to display the padding
+                text-decoration: none;
+                color: $textcolour;
+                font-size: 24px;
+                font-family: $titlefont;
+                -webkit-text-stroke: 1px; 
+                background-color: #fff;
+                padding: 10px 15px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+
+
+            }
+        }
+
+        #comm{
+            width: 50%;
+
+        }
+
+
+    }
+
+    .posts{
+        @include flexbox(row,center);
+        padding: 0px 15px;
+        column-gap: 15px;
+
+        .rect{
+            @include flexbox(row,center);
+            @include styling();
+            align-items: center;
+
+            img{
+                @include box(100px);
+            }
+        }
+
+        .details{
+            @include flexbox(column,center);
+        }
+
+        .commented{
+            @include flexbox(column,center);
+            width: 50%;
+
+            .rect{
+                @include dimensions(none,fit-content);
+                
+
+                img{
+                    @include box(200px);
+                }
+            }
+
+            
+        }
+
+
+        .bookmarked{
+            @include flexbox(column,center);
+            width: 25%;
+
+        }
+        
+        .liked{
+            @include flexbox(column,center);
+            width: 25%;
+
+        }
+
+
+    }
+
+}
+
+//Responsiveness
+@media screen and (max-width:1175px){
+    .section{
+        .posts{
+            .rect{
+                img{
+                    @include box(80px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px){
+    .section{
+        .user{
+            img{
+                @include dimensions(150px,200px);
+            }
+        }
+        .posts{
+            .commented{
+                .rect{
+                    img{
+                        @include box(100px);
+                    }
+                }
+            }
+            .bookmarked{
+                .rect{
+                    @include flexbox(column,center);
+                }
+            }
+
+            .liked{
+                .rect{
+                    @include flexbox(column,center);
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:715px){
+    .section{
+        .contribution{
+            span{
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+        .posts{
+            .commented{
+                .rect{
+                    @include flexbox(column,center);
+                    img{
+                        @include box(80px);
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:475px){
+    .section{
+        .contribution{
+            span{
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+        .posts{
+            .commented{
+                .rect{
+                    @include flexbox(column,center);
+                    img{
+                        @include box(80px);
+                    }
+
+                }
+            }
+        }
+    }
+}

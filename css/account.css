@@ -1,0 +1,204 @@
+.af-icon {
+  background: url(../svg/test.svg);
+}
+
+.af-icon2 {
+  background: url(../svg/AFLogosvg2.svg);
+}
+
+.bookmark-icon {
+  background: url(../svg/icons8-bookmark-50.svg);
+}
+
+.like-icon {
+  background: url(../svg/icons8-favorite-folder-50.svg);
+}
+
+.share-icon {
+  background: url(../svg/icons8-share-50.svg);
+}
+
+.menu-icon {
+  background: url(../svg/icons8-menu-100.svg);
+}
+
+.instagram-icon {
+  background: url(../svg/icons8-instagram-50.svg);
+}
+
+.facebook-icon {
+  background: url(../svg/icons8-facebook-50.svg);
+}
+
+.tick-icon {
+  background: url(../svg/icons8-ok-50.svg);
+}
+
+.cross-icon {
+  background: url(../svg/icons8-cancel-50.svg);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 200px;
+  gap: 50px;
+}
+.section img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+.section .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+.section .user img {
+  width: 300px;
+  height: 400px;
+}
+.section .user .settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section .contribution {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.section .contribution span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 25%;
+}
+.section .contribution span p {
+  width: fit-content;
+  display: block;
+  text-decoration: none;
+  color: #685F3B;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  -webkit-text-stroke: 1px;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.section .contribution #comm {
+  width: 50%;
+}
+.section .posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px 15px;
+  column-gap: 15px;
+}
+.section .posts .rect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for glass effect */
+  gap: 10px;
+  backdrop-filter: blur(5px); /* Subtle blur effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  align-items: center;
+}
+.section .posts .rect img {
+  width: 100px;
+  height: 100px;
+}
+.section .posts .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section .posts .commented {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.section .posts .commented .rect {
+  width: none;
+  height: fit-content;
+}
+.section .posts .commented .rect img {
+  width: 200px;
+  height: 200px;
+}
+.section .posts .bookmarked {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+}
+.section .posts .liked {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+}
+
+@media screen and (max-width: 1175px) {
+  .section .posts .rect img {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .section .user img {
+    width: 150px;
+    height: 200px;
+  }
+  .section .posts .commented .rect img {
+    width: 100px;
+    height: 100px;
+  }
+  .section .posts .bookmarked .rect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section .posts .liked .rect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 715px) {
+  .section .contribution span p {
+    font-size: 16px;
+  }
+  .section .posts .commented .rect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section .posts .commented .rect img {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .section .contribution span p {
+    font-size: 10px;
+  }
+  .section .posts .commented .rect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section .posts .commented .rect img {
+    width: 80px;
+    height: 80px;
+  }
+}/*# sourceMappingURL=account.css.map */

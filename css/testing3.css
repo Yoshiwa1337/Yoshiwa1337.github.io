@@ -1,0 +1,200 @@
+
+
+
+.af-icon {
+  background: url(svg/test.svg);
+}
+
+.af-icon2 {
+  background: url(svg/AFLogosvg2.svg);
+}
+
+.bookmark-icon {
+  background: url(svg/icons8-bookmark-50.svg);
+}
+
+.like-icon {
+  background: url(svg/icons8-favorite-folder-50.svg);
+}
+
+.share-icon {
+  background: url(svg/icons8-share-50.svg);
+}
+
+.menu-icon {
+  background: url(svg/icons8-menu-100.svg);
+}
+
+.instagram-icon {
+  background: url(svg/icons8-instagram-50.svg);
+}
+
+.facebook-icon {
+  background: url(svg/icons8-facebook-50.svg);
+}
+
+.tick-icon{
+  background: url(svg/icons8-ok-50.svg);
+}
+
+.cross-icon{
+  background: url(svg/icons8-cancel-50.svg);
+}
+
+i{
+  width: 50px;
+  height: 50px;
+  /* position: absolute; */
+}
+
+/* General Body, Font, and Layout Adjustments */
+/* Navbar Styles with Adjusted Size and Glass Effect */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white for glass effect */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Adjusted for clarity */
+    align-items: center; /* Aligns items centrally */
+    padding: 10px 0; /* Reduced padding for a smaller navbar */
+    width: 100%; /* Ensure the navbar spans the full width */
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar .links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px; /* Add space between logo and links */
+}
+
+.navbar .links li {
+    margin: 0 15px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: #008000; /* Keeping the green color for links */
+    font-weight: bold;
+}
+
+
+/* Reusing main colors and styles */
+:root {
+  --main-bg-color: #b3b48c;
+  --text-color: #685F3B;
+  --input-bg-color: #fff;
+  --button-bg-color: #008000;
+  --button-text-color: #fff;
+  --border-radius: 10px; /* Slightly curved corners as previously defined */
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px; /* Reduced padding for tighter layout */
+}
+
+.page-content .user-section {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for glass effect */
+  backdrop-filter: blur(5px); /* Subtle blur effect */
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 600px; /* Maximum width for larger screens */
+  margin: 20px 0; /* Space above and below the section */
+}
+
+.page-content .user-section h1 {
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-content .user-section .form-row {
+  margin-bottom: 15px;
+}
+
+.page-content .user-section .form-row label {
+  color: var(--text-color);
+  margin-right: 10px;
+  width: 90px;
+  height: 50px;
+}
+
+.page-content .user-section .form-row input[type="text"], .page-content .user-section .form-row input[type="password"] {
+    display: flex;
+    border: 2px solid var(--text-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    width: 70%;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+}
+
+.user-section .form-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+
+
+.page-content .user-section button {
+  background-color: #008000;
+  color: #685F3B;
+  padding: 10px 15px;
+  font-size: 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif;
+}
+
+.page-content .user-section button:hover {
+  background-color: darken(var(--button-bg-color), 10%);
+}
+
+.response-section{
+    display: none;
+}
+
+/* Responsive Adjustments for the Form */
+@media screen and (max-width: 900px) {
+  .page-content .user-section {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .page-content .user-section, .page-content .response-section {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 425px){
+    .user-section .form-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 415px) {
+  .page-content .user-section .form-row input[type="text"], .page-content .user-section .form-row input[type="password"] {
+    width: 60%; /* Adjust input width on very small screens */
+  }
+}

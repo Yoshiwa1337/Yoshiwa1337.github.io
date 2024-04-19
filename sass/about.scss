@@ -1,0 +1,75 @@
+@import "_functions";
+@import "_variables";
+@import "_icons";
+
+
+
+
+
+.content{
+    @include flexbox(column,center);
+    align-items: center;
+    padding-top: $contentpadding;
+
+    .author{
+        @include flexbox(row,center);
+
+        img{
+            @include dimensions(300px,400px);
+            border-radius: $imgradius;
+            object-fit: $imgfit;
+
+        }
+
+
+
+        .icons{
+            @include flexbox(column,center);
+
+            a{
+                @include box(50px);
+            }
+
+        }
+    }
+
+    .details{
+        @include flexbox(column,space-between);
+        @include styling();
+        width: 80%;
+        max-width: 600px; /* Maximum width for larger screens */
+        margin: 20px 0; /* Space above and below the section */
+
+        h3{
+            align-self: center;
+        }
+
+
+    }
+}
+
+.footer{
+    bottom: 0;
+}
+
+//Responsiveness
+@media screen and (max-width:600px){
+    .content{
+        .author{
+            img{
+                @include dimensions(200px,300px);
+            }
+        }
+    }
+    .footer{
+        bottom: auto;
+    }
+}
+
+
+
+@media screen and (max-width:400px){
+    .footer{
+        bottom: auto;
+    }
+}

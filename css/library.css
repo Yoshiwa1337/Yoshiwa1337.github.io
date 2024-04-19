@@ -1,0 +1,115 @@
+.af-icon {
+  background: url(../svg/test.svg);
+}
+
+.af-icon2 {
+  background: url(../svg/AFLogosvg2.svg);
+}
+
+.bookmark-icon {
+  background: url(../svg/icons8-bookmark-50.svg);
+}
+
+.like-icon {
+  background: url(../svg/icons8-favorite-folder-50.svg);
+}
+
+.share-icon {
+  background: url(../svg/icons8-share-50.svg);
+}
+
+.menu-icon {
+  background: url(../svg/icons8-menu-100.svg);
+}
+
+.instagram-icon {
+  background: url(../svg/icons8-instagram-50.svg);
+}
+
+.facebook-icon {
+  background: url(../svg/icons8-facebook-50.svg);
+}
+
+.tick-icon {
+  background: url(../svg/icons8-ok-50.svg);
+}
+
+.cross-icon {
+  background: url(../svg/icons8-cancel-50.svg);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  padding-top: 200px;
+}
+.gallery .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.gallery .box .book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for glass effect */
+  gap: 10px;
+  backdrop-filter: blur(5px); /* Subtle blur effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  align-items: center;
+}
+.gallery .box img {
+  width: 150px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.gallery .imageWrapper {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.gallery .imageWrapper img {
+  width: 90%;
+  max-width: 500px;
+}
+.gallery .imageWrapper span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: #fff;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 675px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 415px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=library.css.map */

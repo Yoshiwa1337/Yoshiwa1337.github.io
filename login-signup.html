@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/login-signup.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Font links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <!-- SVG for Logo -->
+        <div class="logo">
+            <!-- Converted "html svg code" to "svg" code via https://svgexport.io -->
+            <a href="home.html">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="150" height="100">
+                        <text id="main" fill="#008000" stroke="#008000" stroke-width="1.88976px" x="27" y="100" font-size="100px" font-family="Roboto" font-weight="250" font-style="normal">A</text>
+                        <text id="sub" fill="black" stroke="#000000" stroke-width="0.755906px" x="45" y="73" font-size="14px" font-family="Roboto" font-weight="100" font-style="italic">cumenforbes</text>
+                        <line fill="#008000" stroke="#008000" stroke-width="3.40157px" x1="45" y1="77" x2="130" y2="77"></line>
+                </svg>
+            </a>
+            <i class="menu-icon"></i>
+        </div>
+
+        <ul class="links">
+            <li class="main"><a href="journal.html">Journal Entry</a></li>
+            <li class="main"><a href="audio.html">Audio Entry</a></li>
+            <li class="main"><a href="library.html">Library</a></li>
+            <li class="main"><a href="login-signup.html">Login/Sign up</a></li>
+            <li class="main"><a href="about.html">About Me</a></li>
+        </ul>
+    </div>
+
+    <div class="page-content">
+        <div class="image">
+            <img src="img/595064.png" alt="">
+        </div>
+
+        <!-- login/signup section -->
+        <div class="user-section">
+
+            <form id="mainForm" action="account.html" method="post">
+                <h1>Login/Signup</h1>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Enter email" autocomplete="off">
+                    <i class="icon"></i>
+                </div>
+                <p id="mailMsg"></p>
+
+                <div class="form-row">
+                    <label for="password">Password:</label>
+                    <input type="text" id="password" name="password" placeholder="Enter password" autocomplete="off">
+                    <i class="icon"></i>
+                </div>
+                <p id="passMsg"></p>
+
+                <div class="form-row">
+                    <label for="password">Re-Password:</label>
+                    <input type="text" id="passConfirm" name="passConfirm" placeholder="Confirm password" autocomplete="off">
+                    <i class="icon"></i>
+                </div>
+                <p id="cnfrmMsg"></p>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer">
+
+        <hr>
+        <div class="socials">
+            <ul class="links">
+                <li><a href="https://www.facebook.com/VanityForbesBlog">Facebook</a></li>
+                <li><a href="https://www.instagram.com/vanityforbes/">Instagram</a></li>
+            </ul>
+
+        </div>
+
+        <div class="policy">
+            <ul class="links">
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+        </div>
+        <hr>
+
+        <h3>@2024 - All Rights Reserved. Designed & Developed by Yehoshua Forbes</h3>
+
+
+
+    </div>
+    <script src="js/log-signform.js"></script>
+    <script src="js/navbar.js"></script>
+
+
+
+
+</body>
+</html>

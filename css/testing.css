@@ -1,0 +1,82 @@
+/* General Body, Font, and Layout Adjustments */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light grey background for contrast */
+}
+
+/* Improved Navbar */
+.navbar {
+  background-color: #fff; /* Keeping it clean and simple */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar .links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: #008000; /* Main green color */
+  font-weight: bold;
+}
+
+/* Landing Section Enhancements */
+.landing {
+  display: block; /* Switched to block layout for simplicity */
+  padding: 20px;
+}
+
+.landing .latest, .landing .rect {
+  margin-bottom: 20px;
+}
+
+.landing .latest img, .landing .rect img {
+  max-width: 100%; /* Responsive image size */
+  height: auto;
+}
+
+/* Icons Adjustments */
+i.like-icon, i.bookmark-icon, i.share-icon, i.menu-icon, i.instagram-icon, i.facebook-icon {
+  display: inline-block;
+  background-size: contain; /* Ensure icons fit well */
+  margin-right: 10px;
+}
+
+/* Footer Enhancements */
+.footer {
+  background-color: #333; /* Darker shade for contrast */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer .links a {
+  color: #f4f4f4; /* Lighter text for readability */
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .landing .rect {
+    grid-template-columns: 1fr; /* Stack elements on smaller screens */
+  }
+}
+
+/* Additional Media Queries for further responsiveness */
+@media screen and (max-width: 480px) {
+  .navbar .links li {
+    display: block;
+    margin: 5px 0;
+  }
+}

@@ -1,0 +1,116 @@
+@import "_functions";
+@import "_variables";
+@import "_icons";
+
+//
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Global styling
+body{
+    background-color: $bodycolour; 
+    color: $textcolour; 
+    p{
+        font-family: $textfont;
+        font-size: $textsize; 
+    }
+}
+
+
+
+.menu-icon{
+    @include box(100px);
+    display: none;
+    border: none;
+}
+
+//Navbar styling
+.navbar{
+    @include dimensions(100%,none);
+    @include flexbox(column,center);
+    align-items: center;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    hr{
+        @include dimensions(100%,0);
+        border: 0.2px solid black;
+
+    }
+
+    .links{
+        @include flexbox(row,center);
+        list-style: none;
+        font-family: $titlefont;
+        padding: 0;
+        margin-top: 10px;
+
+        li{
+            margin: 0 15px;
+        }
+
+        a{
+            display: block; //Needed to display the padding
+            padding: 5px 50px; //Gap between text and the top/bottom dividers
+            text-decoration: none;
+            color: $titlecolour;
+            font-size: 24px;
+            font-family: $titlefont;
+            -webkit-text-stroke: 1px; 
+        }
+    }
+}
+
+
+//Scroll stuff
+
+.scroll-down .navbar{
+    transform: translate3d(0, -100%, 0);
+    transition: 300ms ease-in-out;
+}
+
+.scroll-up .navbar{
+    transition: 200ms ease-in;
+
+}
+
+
+// Responsiveness
+@media screen and (max-width:1000px){
+    .navbar{
+
+
+        #bottom{
+            display: none;
+        }
+
+        .menu-icon{
+            display: block;
+            right: 0;
+            top: 0;
+            position: absolute;
+        }
+
+        .links{
+            display: none;
+        }
+
+        .show{
+            @include flexbox(column,flex-end);
+        }
+
+
+
+    }
+    
+
+}

@@ -1,0 +1,132 @@
+@import "_functions";
+@import "_variables";
+@import "_icons";
+
+
+
+.page-content{
+    @include flexbox(column,center);
+    align-items: center;
+    padding-top: $contentpadding; //Section would start inside navbar without padding
+
+
+
+    .image{
+        @include flexbox(row,none);
+        img{
+            @include dimensions(800px,400px);
+            border-radius: $imgradius;
+            object-fit: $imgfit;
+        }
+    }
+
+    .user-section{
+        @include flexbox(column,none);
+        @include styling();
+        width: 80%;
+        max-width: 600px; /* Maximum width for larger screens */
+        margin: 20px 0; /* Space above and below the section */
+
+        button{
+            border: none;
+            display: block; //Needed to display the padding
+            text-decoration: none;
+            color: $textcolour;
+            font-size: 24px;
+            font-family: $titlefont;
+            background-color: #008000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+
+
+        }
+
+        button:hover{
+            background-color: #fff;
+            color: #008000;
+            transform: translateY(-2px);
+        }
+
+
+
+        h1{
+            color: $titlecolour;
+            font-family: $titlefont;
+            text-align: center;
+            margin-bottom: 20px
+        }
+
+        .form-row{
+            @include flexbox(row,space-around);
+            margin-bottom: 10px;
+
+            i{
+                @include box(50px);
+            }
+
+            label{
+                @include dimensions(90px,50px);
+                color: $textcolour;
+                margin-right: 10px;
+                font-family: $textfont;
+            }
+
+            input{
+                border: 2px solid $textcolour;
+                border-radius: 10px;
+                padding: 10px;
+                width: 70%;
+                background-color: #fff;
+                color: $textcolour;
+            }
+        }
+    }
+
+    .response-section{
+        display: none;
+    }
+}
+
+
+
+//Responsiveness
+@media screen and (max-width:900px){
+    .page-content{
+        .image{
+            img{
+                @include dimensions(600px,300px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:675px){
+    .page-content{
+        .image{
+            img{
+                @include dimensions(400px,200px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:415px){
+    .page-content{
+        .image{
+            img{
+                @include dimensions(300px,150px);
+            }
+        }
+
+        .user-section{
+            @include flexbox(column,center);
+            .form-row{
+                @include flexbox(column,space-between);
+            }
+        }
+
+    }
+}

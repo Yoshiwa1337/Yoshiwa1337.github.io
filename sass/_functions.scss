@@ -1,0 +1,24 @@
+@mixin box($num){
+    width: $num;
+    height: $num;
+}
+
+@mixin dimensions($width,$height){
+    width: $width;
+    height: $height;
+}
+
+@mixin flexbox($direction,$justify){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@mixin styling(){
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for glass effect */
+    gap: 10px;
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}

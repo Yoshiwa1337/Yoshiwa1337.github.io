@@ -1,0 +1,6 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+        <rect width="100%" height="100%" fill="black"></rect>
+        <text id="main" fill="#008000" stroke="#008000" stroke-width="1.88976px" x="27" y="100" font-size="100px" font-family="Roboto" font-weight="250" font-style="normal">A</text>
+        <text id="sub" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.755906px" x="45" y="73" font-size="14px" font-family="Roboto" font-weight="100" font-style="italic">cumenforbes</text>
+        <line fill="#008000" stroke="#008000" stroke-width="3.40157px" x1="45" y1="77" x2="130" y2="77"></line>
+    </svg>

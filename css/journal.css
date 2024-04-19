@@ -1,0 +1,150 @@
+.af-icon {
+  background: url(../svg/test.svg);
+}
+
+.af-icon2 {
+  background: url(../svg/AFLogosvg2.svg);
+}
+
+.bookmark-icon {
+  background: url(../svg/icons8-bookmark-50.svg);
+}
+
+.like-icon {
+  background: url(../svg/icons8-favorite-folder-50.svg);
+}
+
+.share-icon {
+  background: url(../svg/icons8-share-50.svg);
+}
+
+.menu-icon {
+  background: url(../svg/icons8-menu-100.svg);
+}
+
+.instagram-icon {
+  background: url(../svg/icons8-instagram-50.svg);
+}
+
+.facebook-icon {
+  background: url(../svg/icons8-facebook-50.svg);
+}
+
+.tick-icon {
+  background: url(../svg/icons8-ok-50.svg);
+}
+
+.cross-icon {
+  background: url(../svg/icons8-cancel-50.svg);
+}
+
+i {
+  width: 50px;
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.journal-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 200px;
+  align-content: center;
+  flex-wrap: wrap;
+  row-gap: 50px;
+}
+.journal-gallery .rect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 600px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for glass effect */
+  gap: 10px;
+  backdrop-filter: blur(5px); /* Subtle blur effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  align-items: center;
+}
+.journal-gallery .rect .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.journal-gallery .rect .details .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.journal-gallery .rect img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 645px) {
+  .journal-gallery .rect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 540px;
+    height: 180px;
+    align-items: center;
+    padding: 30px 15px;
+  }
+  .journal-gallery .rect img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .journal-gallery .rect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 480px;
+    height: 160px;
+    align-items: center;
+    padding: 30px 15px;
+  }
+  .journal-gallery .rect img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 525px) {
+  .journal-gallery .rect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 420px;
+    height: 140px;
+    align-items: center;
+    padding: 30px 15px;
+  }
+  .journal-gallery .rect img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .journal-gallery .rect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 360px;
+    height: 140px;
+    align-items: center;
+    padding: 30px 15px;
+  }
+  .journal-gallery .rect img {
+    width: 100px;
+    height: 100px;
+  }
+}/*# sourceMappingURL=journal.css.map */

@@ -1,0 +1,112 @@
+@import "_functions";
+@import "_icons";
+@import "_variables";
+
+
+i{
+    @include box(50px);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.journal-gallery{
+    @include flexbox(column,space-between);
+    padding-top: $contentpadding;
+    align-content: center;
+    flex-wrap: wrap;
+    row-gap: 50px;
+
+    .rect{
+        @include flexbox(row,center);
+        @include dimensions(600px,200px);
+        @include styling();
+        align-items: center;
+
+        .details{
+            @include flexbox(column,center);
+
+            .icons{
+                @include flexbox(row,left);
+
+            }
+        }
+
+        img{
+            @include box(150px);
+            border-radius: $imgradius;
+            object-fit: $imgfit;
+        }
+    }
+
+
+
+}
+
+
+//Responsiveness
+@media screen and (max-width:645px){
+    .journal-gallery{
+        .rect{
+            @include flexbox(row,center);
+            @include dimensions(540px,180px);
+            align-items: center;
+            padding: 30px 15px;
+            
+            img{
+                @include box(100px);
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width:575px){
+    .journal-gallery{
+        .rect{
+            @include flexbox(row,center);
+            @include dimensions(480px,160px);
+            align-items: center;
+            padding: 30px 15px;
+            
+            img{
+                @include box(100px);
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width:525px){
+    .journal-gallery{
+        .rect{
+            @include flexbox(row,center);
+            @include dimensions(420px,140px);
+            align-items: center;
+            padding: 30px 15px;
+            
+            img{
+                @include box(100px);
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width:475px){
+    .journal-gallery{
+        .rect{
+            @include flexbox(row,center);
+            @include dimensions(360px,140px);
+            align-items: center;
+            padding: 30px 15px;
+            
+            img{
+                @include box(100px);
+            }
+        }
+    }
+    
+}

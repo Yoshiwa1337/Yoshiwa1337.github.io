@@ -1,0 +1,154 @@
+.af-icon {
+  background: url(../svg/test.svg);
+}
+
+.af-icon2 {
+  background: url(../svg/AFLogosvg2.svg);
+}
+
+.bookmark-icon {
+  background: url(../svg/icons8-bookmark-50.svg);
+}
+
+.like-icon {
+  background: url(../svg/icons8-favorite-folder-50.svg);
+}
+
+.share-icon {
+  background: url(../svg/icons8-share-50.svg);
+}
+
+.menu-icon {
+  background: url(../svg/icons8-menu-100.svg);
+}
+
+.instagram-icon {
+  background: url(../svg/icons8-instagram-50.svg);
+}
+
+.facebook-icon {
+  background: url(../svg/icons8-facebook-50.svg);
+}
+
+.tick-icon {
+  background: url(../svg/icons8-ok-50.svg);
+}
+
+.cross-icon {
+  background: url(../svg/icons8-cancel-50.svg);
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+.page-content .image {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+}
+.page-content .image img {
+  width: 800px;
+  height: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.page-content .user-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for glass effect */
+  gap: 10px;
+  backdrop-filter: blur(5px); /* Subtle blur effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 80%;
+  max-width: 600px; /* Maximum width for larger screens */
+  margin: 20px 0; /* Space above and below the section */
+}
+.page-content .user-section button {
+  border: none;
+  display: block;
+  text-decoration: none;
+  color: #685F3B;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  background-color: #008000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: none;
+}
+.page-content .user-section button:hover {
+  background-color: #fff;
+  color: #008000;
+  transform: translateY(-2px);
+}
+.page-content .user-section h1 {
+  color: rgb(0, 126, 0);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.page-content .user-section .form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.page-content .user-section .form-row i {
+  width: 50px;
+  height: 50px;
+}
+.page-content .user-section .form-row label {
+  width: 90px;
+  height: 50px;
+  color: #685F3B;
+  margin-right: 10px;
+  font-family: "Calligraffitti", cursive;
+}
+.page-content .user-section .form-row input {
+  border: 2px solid #685F3B;
+  border-radius: 10px;
+  padding: 10px;
+  width: 70%;
+  background-color: #fff;
+  color: #685F3B;
+}
+.page-content .response-section {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .page-content .image img {
+    width: 600px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .page-content .image img {
+    width: 400px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .page-content .image img {
+    width: 300px;
+    height: 150px;
+  }
+  .page-content .user-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .page-content .user-section .form-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=login-signup.css.map */

@@ -1,0 +1,133 @@
+.af-icon {
+  background: url(../svg/test.svg);
+}
+
+.af-icon2 {
+  background: url(../svg/AFLogosvg2.svg);
+}
+
+.bookmark-icon {
+  background: url(../svg/icons8-bookmark-50.svg);
+}
+
+.like-icon {
+  background: url(../svg/icons8-favorite-folder-50.svg);
+}
+
+.share-icon {
+  background: url(../svg/icons8-share-50.svg);
+}
+
+.menu-icon {
+  background: url(../svg/icons8-menu-100.svg);
+}
+
+.instagram-icon {
+  background: url(../svg/icons8-instagram-50.svg);
+}
+
+.facebook-icon {
+  background: url(../svg/icons8-facebook-50.svg);
+}
+
+.tick-icon {
+  background: url(../svg/icons8-ok-50.svg);
+}
+
+.cross-icon {
+  background: url(../svg/icons8-cancel-50.svg);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b3b48c;
+  color: #685F3B;
+}
+body p {
+  font-family: "Calligraffitti", cursive;
+  font-size: 1rem;
+}
+
+.menu-icon {
+  width: 100px;
+  height: 100px;
+  display: none;
+  border: none;
+}
+
+.navbar {
+  width: 100%;
+  height: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Blur effect for the background */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.navbar hr {
+  width: 100%;
+  height: 0;
+  border: 0.2px solid black;
+}
+.navbar .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin-top: 10px;
+}
+.navbar .links li {
+  margin: 0 15px;
+}
+.navbar .links a {
+  display: block;
+  padding: 5px 50px;
+  text-decoration: none;
+  color: rgb(0, 126, 0);
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  -webkit-text-stroke: 1px;
+}
+
+.scroll-down .navbar {
+  transform: translate3d(0, -100%, 0);
+  transition: 300ms ease-in-out;
+}
+
+.scroll-up .navbar {
+  transition: 200ms ease-in;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar #bottom {
+    display: none;
+  }
+  .navbar .menu-icon {
+    display: block;
+    right: 0;
+    top: 0;
+    position: absolute;
+  }
+  .navbar .links {
+    display: none;
+  }
+  .navbar .show {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,187 @@
+.af-icon {
+  background: url(/AFSTUFF/svg/test.svg);
+}
+
+.af-icon2 {
+  background: url(/AFSTUFF/svg/AFLogosvg2.svg);
+}
+
+.bookmark-icon {
+  background: url(/AFSTUFF/svg/icons8-bookmark-50.svg);
+}
+
+.like-icon {
+  background: url(/AFSTUFF/svg/icons8-favorite-folder-50.svg);
+}
+
+.share-icon {
+  background: url(/AFSTUFF/svg/icons8-share-50.svg);
+}
+
+.menu-icon {
+  background: url(/AFSTUFF/svg/icons8-menu-100.svg);
+}
+
+.instagram-icon {
+  background: url(/AFSTUFF/svg/icons8-instagram-50.svg);
+}
+
+.facebook-icon {
+  background: url(/AFSTUFF/svg/icons8-facebook-50.svg);
+}
+
+
+/* General Body, Font, and Layout Adjustments */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding-top: 100px; /* Adjusted padding to account for the navbar */
+    background-color: #b3b48c; /* Main background color */
+    color: #685F3B; /* Main text color */
+}
+
+/* Navbar Styles with Adjusted Size and Glass Effect */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white for glass effect */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Adjusted for clarity */
+    align-items: center; /* Aligns items centrally */
+    padding: 10px 0; /* Reduced padding for a smaller navbar */
+    width: 100%; /* Ensure the navbar spans the full width */
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar .links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px; /* Add space between logo and links */
+}
+
+.navbar .links li {
+    margin: 0 15px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: #008000; /* Keeping the green color for links */
+    font-weight: bold;
+}
+
+/* Landing Section Adjustments */
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering content */
+    margin-top: 20px; /* Space between navbar and .landing content */
+}
+
+/* .latest Section Styling - Centered */
+.landing .latest {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Image Styling */
+.landing .latest img {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* .rect Section - Horizontal layout with Flexbox */
+.landing .rect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.landing .rect .details {
+    margin-right: 20px; /* Space between text/icons and image */
+}
+
+.landing .rect img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Adjusting icon sizes */
+i.like-icon, i.bookmark-icon, i.share-icon, i.menu-icon, i.instagram-icon, i.facebook-icon {
+    display: inline-block;
+    background-size: contain;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* i {
+  width: 50px;
+  height: 50px;
+}
+
+.landing .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+} */
+
+
+/* Styling for .landing .filter .links */
+.landing .filter .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.landing .filter .links li {
+    margin: 0 10px;
+}
+
+.landing .filter .links a {
+    text-decoration: none;
+    color: #685F3B;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.landing .filter .links a:hover {
+    background-color: #b3b48c;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer .links a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+    .landing .rect {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+}

@@ -1,0 +1,98 @@
+@import "_functions";
+@import "_variables";
+@import "_icons";
+
+
+
+i{
+    @include box(50px);
+}
+
+.article{
+    @include flexbox(column,space-around);
+    padding-top: $contentpadding; //Section would start inside navbar without padding
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    img{
+        @include dimensions(800px,400px);
+        border-radius: $imgradius;
+        object-fit: $imgfit;
+    }
+
+    p{
+        @include dimensions(70%,none);
+    }
+
+    h1{
+        align-self: left;
+    }
+
+
+    .icon{
+        @include flexbox(row,left);
+    }
+
+
+    .comment-section{
+        @include flexbox(row,center);
+        @include dimensions(600px,150px);
+        @include styling();
+        align-items: center;
+        
+        img{
+            @include box(100px);
+        }
+
+        .user-comment{
+            @include flexbox(column,center);
+        }
+    }
+
+}
+
+
+//Responsiveness
+@media screen and (max-width:900px){
+    .article{
+        img{
+            @include dimensions(600px,300px);
+        }
+    }
+
+    .comment-section{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:675px){
+    .article{
+        img{
+            @include dimensions(400px,200px);
+        }
+
+        .comment-section{
+            width: 100%;
+
+            .user-comment{
+                p{
+                    width: fit-content;
+                    height: fit-content;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:415px){
+    .article{
+        img{
+            @include dimensions(300px,150px);
+        }
+
+    }
+
+}
